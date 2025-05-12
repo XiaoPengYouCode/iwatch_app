@@ -3,7 +3,7 @@ use futures_util::StreamExt;
 use tracing::info;
 
 use crate::backend::ble::DeviceManager;
-use crate::page::active::{CardTitle, CARD_CONTAINER_CLASS, PAGE_CONTAINER_CLASS};
+use crate::frontend::page::active::{CardTitle, CARD_CONTAINER_CLASS, PAGE_CONTAINER_CLASS};
 
 enum BleUpdate {
     Connect,
