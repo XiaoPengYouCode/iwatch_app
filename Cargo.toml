@@ -1,0 +1,34 @@
+[package]
+name = "iwatch_app"
+version = "0.1.0"
+authors = ["Zhongjin Lu <luzhongjin365@gmail.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+btleplug = "0.11.8"
+chrono = "0.4.40"
+dioxus = { version = "0.6.3", features = ["desktop", "router"] }
+futures-util = "0.3.31"
+log = "0.4.27"
+serde = { version = "1.0.219", features = ["derive"] }
+tokio = { version = "1.44.2", features = ["full"] }
+tracing = "0.1.41"
+uuid = "1.16.0"
+
+[features]
+default = ["web"]
+web = ["dioxus/web"]
+desktop = ["dioxus/desktop"]
+mobile = ["dioxus/mobile"]
+
+[profile.wasm-dev]
+inherits = "dev"
+opt-level = 1
+
+[profile.server-dev]
+inherits = "dev"
+
+[profile.android-dev]
+inherits = "dev"
