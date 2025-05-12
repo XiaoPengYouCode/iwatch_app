@@ -4,4 +4,4 @@
 
 ## snappist
 
-![iwatch_app](assets/png/screen_shot.png)
+![iwatch_app](assets/png/screenshot.png)
